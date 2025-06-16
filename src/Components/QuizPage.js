@@ -8,7 +8,11 @@ const QuizPage = ({quiz}) => {
     //현재 퀴즈번호
     const currentQuiz = quiz[currentIdx];
     const handleClick = (value)=>{
-        const result
+        const result = (value === currentQuiz.correct) ? score+10 : score;
+        if(currentIdx+1 < quiz.length){
+            //quiz.length아래 인덱스들은 계속 실행
+            setCurrentIdx
+        }
     }
     return (
         <div className="quiz-page">

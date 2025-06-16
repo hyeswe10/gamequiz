@@ -28,10 +28,10 @@ const App = () => {
     setFinished(false);
   }
   return (
-    <div>
-      {!category && <Categories category={gameData.categories}onSelect={onSelectCategory}/>}
-      {category && <QuizPage quiz={filterQuiz}/>}
-      <Result/>
+    <div className="app">
+      {!category && !finished && <Categories category={gameData.categories}onSelect={onSelectCategory}/>}
+      {category && !finished && <QuizPage quiz={filterQuiz} onFinished={handleFinish}/>}
+      {finished && <Result final={score} restart={handleRestart}/>}
     </div>
   );
 };

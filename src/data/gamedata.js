@@ -7,7 +7,7 @@ const gameData = {
       category: "챔피언",
       difficulty: "쉬움",
       question: "💬 민수: \"리그오브레전드에서 '악마의 잔영' 별명을 가진 챔피언은?\"",
-      choices: ["이블린", "모르가나", "카서스", "베이가"],
+      choices: ["모르가나", "아트록스", "이블린", "바루스"],
       correct: "이블린"
     },
     {
@@ -15,7 +15,7 @@ const gameData = {
       category: "챔피언",
       difficulty: "보통",
       question: "🧠 수빈: \"궁극기가 '죽음의 연꽃'인 챔피언은?\"",
-      choices: ["카타리나", "아칼리", "제드", "탈론"],
+      choices: ["제드", "아칼리", "카타리나", "탈론"],
       correct: "카타리나"
     },
     {
@@ -31,7 +31,7 @@ const gameData = {
       category: "챔피언",
       difficulty: "보통",
       question: "🧑‍💼 태민: \"리그오브레전드에서 '공허의 딸'로 알려진 챔피언은?\"",
-      choices: ["카이사", "벨코즈", "초가스", "렉사이"],
+      choices: ["카사딘", "벨베스", "카이사", "렉사이"],
       correct: "카이사"
     },
     {
@@ -39,7 +39,7 @@ const gameData = {
       category: "챔피언",
       difficulty: "어려움",
       question: "🎯 해린: \"패시브 스킬이 '마법석'인 챔피언은?\"",
-      choices: ["나르", "말파이트", "람머스", "오른"],
+      choices: ["나르", "말파이트", "라이즈", "오른"],
       correct: "말파이트"
     },
 
@@ -57,7 +57,7 @@ const gameData = {
       category: "아이템",
       difficulty: "보통",
       question: "💡 연우: \"마법 저항력을 올려주는 방어 아이템은?\"",
-      choices: ["정령의 형상", "스태틱의 단검", "무한의 대검", "핏빛 칼날"],
+      choices: ["정령의 형상", "스태틱의 단검", "망자의 갑옷", "핏빛 칼날"],
       correct: "정령의 형상"
     },
     {
@@ -73,7 +73,7 @@ const gameData = {
       category: "아이템",
       difficulty: "쉬움",
       question: "⚔️ 도윤: \"치명타 확률을 높여주는 아이템은?\"",
-      choices: ["무한의 대검", "란두인의 예언", "정령의 형상", "가시 갑옷"],
+      choices: ["스태틱의 단검", "란두인의 예언", "무한의 대검", "가시 갑옷"],
       correct: "무한의 대검"
     },
     {
@@ -81,7 +81,7 @@ const gameData = {
       category: "아이템",
       difficulty: "보통",
       question: "🔍 재현: \"다음 중 생명력 흡수가 있는 아이템은?\"",
-      choices: ["몰락한 왕의 검", "얼어붙은 심장", "스태틱의 단검", "란두인의 예언"],
+      choices: ["몰락한 왕의 검", "얼어붙은 심장", "스태틱의 단검", "고속 연사포"],
       correct: "몰락한 왕의 검"
     },
 
@@ -99,7 +99,7 @@ const gameData = {
       category: "게임 용어",
       difficulty: "보통",
       question: "📈 태민: \"'와드'의 주된 목적은?\"",
-      choices: ["시야 확보", "공격력 증가", "이동 속도 증가", "체력 회복"],
+      choices: ["이동 속도 증가", "공격력 증가", "시야 확보", "체력 회복"],
       correct: "시야 확보"
     },
     {
@@ -115,7 +115,7 @@ const gameData = {
       category: "게임 용어",
       difficulty: "쉬움",
       question: "🕹️ 진우: \"롤에서 '블루'는 무엇을 의미할까?\"",
-      choices: ["푸른 파수꾼", "용", "전령", "내셔 남작"],
+      choices: ["푸른 전령", "용", "푸른 파수꾼", "내셔 남작"],
       correct: "푸른 파수꾼"
     },
     {
@@ -133,7 +133,7 @@ const gameData = {
       category: "e스포츠",
       difficulty: "쉬움",
       question: "🏆 태형: \"리그오브레전드 월드 챔피언십을 흔히 부르는 이름은?\"",
-      choices: ["롤드컵", "롤챌린지", "롤프리미어", "롤마스터즈"],
+      choices: ["롤림픽", "롤챌린지", "롤드컵", "롤마스터즈"],
       correct: "롤드컵"
     },
     {
@@ -149,7 +149,7 @@ const gameData = {
       category: "e스포츠",
       difficulty: "어려움",
       question: "🏅 아라: \"2020 롤드컵 우승 팀은?\"",
-      choices: ["DAMWON Gaming", "T1", "G2 Esports", "FunPlus Phoenix"],
+      choices: ["DRX", "T1", "DAMWON Gaming", "FunPlus Phoenix"],
       correct: "DAMWON Gaming"
     },
     {
@@ -175,7 +175,7 @@ const gameData = {
       category: "소환사의 협곡",
       difficulty: "쉬움",
       question: "🌿 연우: \"맵에서 '드래곤'이 처음 등장하는 시간은?\"",
-      choices: ["5분", "2분", "7분", "3분 30초"],
+      choices: ["10분", "2분", "5분", "3분 30초"],
       correct: "5분"
     },
     {
@@ -199,7 +199,7 @@ const gameData = {
       category: "소환사의 협곡",
       difficulty: "보통",
       question: "🔥 태민: \"화염 드래곤 버프 효과는?\"",
-      choices: ["공격력/주문력 증가", "이동 속도 증가", "체력 재생 증가", "방어력 증가"],
+      choices: ["슬로우 효과", "이동 속도 증가", "체력 재생 증가", "공격력/주문력 증가"],
       correct: "공격력/주문력 증가"
     },
     {

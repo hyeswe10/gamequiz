@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const QuizPage = ({quiz}) => {
+const QuizPage = ({quiz,onFinished}) => {
     //인덱스번호업데이트
     const [currentIdx,setCurrentIdx] = useState(0);
     //점수 합산
@@ -8,7 +8,7 @@ const QuizPage = ({quiz}) => {
     //현재 퀴즈번호
     const currentQuiz = quiz[currentIdx];
     const handleClick = (value)=>{
-        const result = (value === currentQuiz.correct) ? score+10 : score;
+        const result = (value === currentQuiz.correct) ? score+20 : score;
         if(currentIdx+1 < quiz.length){
             //quiz.length아래 인덱스들은 계속 실행
             //quiz.length보다 낮은 수라면 인덱스값에 1씩 더하고
@@ -17,6 +17,7 @@ const QuizPage = ({quiz}) => {
             setScore(result);
         } else {
             //문제를 끝내고 전체합산 후 점수결과 페이지이동
+            onFinished(result);
         }
     }
     return (
@@ -28,7 +29,7 @@ const QuizPage = ({quiz}) => {
             <div className="answers">
                 {
                     currentQuiz.choices.map((value,idx)=>{
-                        return <button key={idx} onClick={handleClick}>{value}</button>
+                        return <button key={idx} onClick={()=>{handleClick(value)}}>{value}</button>
                     })
                 }
             </div>

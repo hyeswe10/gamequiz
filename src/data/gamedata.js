@@ -155,10 +155,10 @@ const gameData = {
     {
       id: 19,
       category: "e스포츠",
-      difficulty: "쉬움",
-      question: "🎮 도윤: \"한국의 LCK는 무엇의 약자일까?\"",
-      choices: ["League of Legends Champions Korea", "League of Korea Champions", "Legends Championship Korea", "League Korea Championship"],
-      correct: "League of Legends Champions Korea"
+      difficulty: "보통",
+      question: "🎥 수빈: \"리그오브레전드의 공식 e스포츠 리그 중 유럽 리그 명칭은?\"",
+      choices: ["LEC", "LCS", "LPL", "LCK"],
+      correct: "LEC"
     },
     {
       id: 20,

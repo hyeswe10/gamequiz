@@ -5,6 +5,7 @@ const Categories = ({category,onSelect}) => {
         <div className="categories">
             <div className="img"></div>
             <h1>당신은 <span>LoL</span>에 대해<br/>얼마나 알고 계신가요?</h1>
+            <h1 className="mobile-title">기본적인 <span>LoL</span><br/>지식 퀴즈</h1>
             <h2>카테고리를 선택해 주세요</h2>
             <div className="category-group">
                 {

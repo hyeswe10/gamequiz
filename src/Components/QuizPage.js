@@ -11,7 +11,12 @@ const QuizPage = ({quiz}) => {
         const result = (value === currentQuiz.correct) ? score+10 : score;
         if(currentIdx+1 < quiz.length){
             //quiz.length아래 인덱스들은 계속 실행
-            setCurrentIdx
+            //quiz.length보다 낮은 수라면 인덱스값에 1씩 더하고
+            setCurrentIdx(currentIdx+1);
+            //점수를 합산동기화한다.
+            setScore(result);
+        } else {
+            //문제를 끝내고 전체합산 후 점수결과 페이지이동
         }
     }
     return (
@@ -23,7 +28,7 @@ const QuizPage = ({quiz}) => {
             <div className="answers">
                 {
                     currentQuiz.choices.map((value,idx)=>{
-                        return <button key={idx}>{value}</button>
+                        return <button key={idx} onClick={handleClick}>{value}</button>
                     })
                 }
             </div>

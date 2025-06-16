@@ -30,7 +30,7 @@ const App = () => {
   }
   return (
     <div className="app">
-      {!category && !finished && <Categories category={gameData.categories}onSelect={onSelectCategory}/>}
+      {!category && !finished && <Categories category={gameData.categories} onSelect={onSelectCategory}/>}
       {category && !finished && <QuizPage quiz={filterQuiz} onFinished={handleFinish}/>}
       {finished && <Result final={score} restart={handleRestart}/>}
     </div>

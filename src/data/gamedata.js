@@ -1,4 +1,4 @@
-const quizData = {
+const gameData = {
   categories: ["챔피언", "아이템", "게임 용어", "e스포츠", "소환사의 협곡"],
   quizzes: [
     // 챔피언 카테고리
@@ -213,4 +213,4 @@ const quizData = {
   ]
 };
 
-export default quizData;
+export default gameData;

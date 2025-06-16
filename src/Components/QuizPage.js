@@ -22,6 +22,7 @@ const QuizPage = ({quiz,onFinished}) => {
     }
     return (
         <div className="quiz-page">
+            
             <h2>퀴즈 No.{currentIdx+1}</h2>
             {/* 퀴즈 질문 */}
             <p>{currentQuiz.question}</p>
@@ -33,6 +34,7 @@ const QuizPage = ({quiz,onFinished}) => {
                     })
                 }
             </div>
+            <p className="quiz-number">{currentIdx+1}/{quiz.length}</p>
         </div>
     );
 };

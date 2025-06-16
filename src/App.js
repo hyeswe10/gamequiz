@@ -1,3 +1,4 @@
+import './Style.scss';
 import { useState } from "react";
 import gameData from "./data/gamedata"
 import Categories from "./Components/Categories";

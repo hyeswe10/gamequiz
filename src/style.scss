@@ -1,3 +1,130 @@
-.category-group{
-    
+//타이틀 폰트
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+//메인폰트
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@mixin titleFont($weight:400){
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+}
+@mixin mainFont{
+    font-family: "Noto Sans KR", sans-serif;
+}
+@mixin buttonStyle{
+    padding: 1rem;
+    background-color: #00AEEF;
+    color: #eee;
+    @include mainFont();
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    &:hover{
+        background-color: #00698f;
+        font-weight: bolder;
+    }
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    color: #eee;
+    @include mainFont();
+}
+.app{
+    width: 420px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A192F;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+.categories{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+    .category-group{
+        padding: 0 2rem;
+        padding-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        button{
+            @include buttonStyle();
+        }
+    }
+}
+h1{
+    text-align: center;
+    @include titleFont(300);
+    font-size: 3rem;
+}
+.quiz-page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    position: relative;
+    h2{
+        font-size: 3rem;
+        @include titleFont();
+    }
+    p{
+        font-size: 1.5rem;
+        word-break: keep-all;
+    }
+    .answers{
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        button{
+            @include buttonStyle();
+        }
+    }
+}
+
+.result{
+    @include mainFont();
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        padding: 3rem 0;
+        text-align: center;
+        font-size: 2rem;
+        &.speech{
+            padding: 0;
+            font-size: 1.6rem;
+        }
+        span{
+            font-size: 8rem;
+            font-weight: bolder;
+            color: #FFB400;
+        }
+    }
+    button{
+        @include buttonStyle();
+    }
 }
